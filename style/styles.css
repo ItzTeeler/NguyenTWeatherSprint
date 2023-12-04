@@ -13,6 +13,10 @@
     src: url(../fonts/Josefin_Sans/static/JosefinSans-SemiBold.ttf);
 }
 
+*{
+    box-sizing: border-box;
+}
+
 .bgGif{
     background: url(../assets/San\ Diego.gif) no-repeat center center fixed;
     background-size: cover;
@@ -117,4 +121,9 @@ p{
 .searchSpacing{
     padding-top: 5%;
     margin-left: 8%;
+}
+
+.accordSize{
+    width: 100%;
+    border-radius: 25px !important;
 }
