@@ -1,0 +1,120 @@
+@font-face {
+    font-family: JosefinSans-Bold;
+    src: url(../fonts/Josefin_Sans/static/JosefinSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: JosefinSans-Regular;
+    src: url(../fonts/Josefin_Sans/static/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: JosefinSans-SemiBold;
+    src: url(../fonts/Josefin_Sans/static/JosefinSans-SemiBold.ttf);
+}
+
+.bgGif{
+    background: url(../assets/San\ Diego.gif) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bgBox{
+    backdrop-filter: blur(10px) brightness(100%);
+    background: linear-gradient(180deg,rgba(0, 0, 0, 0.6) 0%,rgba(2.23, 32.01, 59.5, 0.85) 50%, rgba(10.4, 30.96, 49.94, 0.85) 100%);
+    margin: 5% 10% 5% 10%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 35px #000000;
+}
+
+.currentBox{
+    background-image: linear-gradient(#001446, #384462);
+    border-radius: 25px;
+    margin-left: 65px;
+    margin-right: 60px;
+}
+
+p{
+    color: white;
+}
+
+.ctWText{
+    font-size: 64px;
+    font-family: JosefinSans-Bold;
+}
+
+.locationText{
+    font-size: 40px;
+    font-family: JosefinSans-Regular;
+}
+
+.tempText{
+    font-size: 150px;
+    font-family: JosefinSans-Regular;
+}
+
+.weatherCondText{
+    font-size: 48px;
+    font-family: JosefinSans-SemiBold;
+}
+
+.detailText{
+    font-size: 32px;
+    font-family: JosefinSans-Regular;
+}
+
+.sun {
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    left: 1%;
+    top: 15%
+}
+
+.btnFCText{
+    font-size: 50px;
+    font-family: JosefinSans-Regular;
+    height: 61px;
+}
+
+.borderFC{
+    border-right: solid white;
+    height: 57px;
+    border-width: 2px;
+}
+
+.colBorder{
+    border-right: 4px solid white;
+    height: 785px;
+    border-width: 4px;
+}
+
+.btnFlex{
+    display:flex;
+    justify-content: start;
+}
+
+.btnBorder{
+    border: none;
+}
+ 
+.searchBox {
+    width: 50%;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 35px 10px 15px;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    background-color: black;
+  }
+  
+.searchBtn {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: -580px;
+  }
+
+.searchSpacing{
+    padding-top: 5%;
+    margin-left: 8%;
+}
