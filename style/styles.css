@@ -251,3 +251,8 @@ p{
     display: flex;
     align-items: center;
 }
+
+.makeItARow{
+    display: flex;
+    flex-direction: row;
+}
