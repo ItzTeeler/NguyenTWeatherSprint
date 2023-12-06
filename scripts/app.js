@@ -26,25 +26,24 @@ let currentStVar;
 
 
 // GeoLoc api call
-async function fetchGeoLocation(searchInput){
-    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchInput}&limit=1&appid=${apiKey}`);
+async function FetchGeoLocation(searchInputs){
+    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchInputs}&limit=1&appid=${apiKey}`);
     const data = await promise.json();
-    cityName = data[0].name;
     latitude = data[0].lat;
     longitude = data[0].lon;
-    currentStVar = data[0].state;
 
-    fetchLocalWeather(latitude, longitude);
-    console.log(cityName)
+    FetchLocalWeather(latitude, longitude);
 }
-
-btnSearch.addEventListener("click", function(){
-    fetchGeoLocation(searchInput.value);
+FetchGeoLocation();
+btnSearch.addEventListener("click", function(e){ 
+    e.preventDefault();
+    FetchGeoLocation(searchInput.value);
+    console.log(searchInput.value);
 });
 
 // current weather call
-async function fetchLocalWeather(lat, lon){
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`);
+async function FetchLocalWeather(lat, lon){
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`);
     const data = await promise.json();
     currentLocation.innerText = `${data.name}, `;
     currentTemp.innerText = Math.round(data.main.temp);
@@ -53,13 +52,21 @@ async function fetchLocalWeather(lat, lon){
     currentMin.innerText = Math.round(data.main.temp_min);
 
     const word = data.weather[0].description;
-    const capitalized = word.charAt(0).toUpperCase() + word.slice(1)
+    const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
     weatherDescription.innerText = capitalized;
-
-    console.log(cityName);
 }
 
-// Get User location
+// 5 day forecast
+
+async function FetchFiveDayWeather(lat, lon){
+    const promise = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`);
+    const data = await promise.json();
+
+    console.log(data);
+}
+
+
+//Get User location
 navigator.geolocation.getCurrentPosition(success, errorFunc);
 
 
@@ -68,7 +75,8 @@ function success(position){
     console.log("Our longitude: " + position.coords.longitude);
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
-    fetchLocalWeather(latitude, longitude);
+    FetchLocalWeather(latitude, longitude);
+    FetchFiveDayWeather(latitude, longitude);
 };
 
 
