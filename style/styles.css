@@ -256,9 +256,7 @@ p{
     display: flex;
     flex-direction: row;
 }
-.evenMorePadding{
-    padding-right: 50px;
-}
+
 .morePadding{
     padding-right: 100px;
 }
