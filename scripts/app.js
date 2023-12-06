@@ -27,7 +27,7 @@ let currentStVar;
 
 // GeoLoc api call
 async function fetchGeoLocation(searchInput){
-    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchInput}&limit=1&appid=4e92339b8028f1943944dd1203503cf6`);
+    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchInput}&limit=1&appid=${apiKey}`);
     const data = await promise.json();
     cityName = data[0].name;
     latitude = data[0].lat;
@@ -44,7 +44,7 @@ btnSearch.addEventListener("click", function(){
 
 // current weather call
 async function fetchLocalWeather(lat, lon){
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=4e92339b8028f1943944dd1203503cf6`);
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`);
     const data = await promise.json();
     currentLocation.innerText = `${data.name}, `;
     currentTemp.innerText = Math.round(data.main.temp);
