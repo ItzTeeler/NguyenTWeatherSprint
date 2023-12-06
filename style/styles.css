@@ -256,3 +256,7 @@ p{
     display: flex;
     flex-direction: row;
 }
+
+.morePadding{
+    padding-right: 170px;
+}
