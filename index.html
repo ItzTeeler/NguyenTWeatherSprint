@@ -17,11 +17,13 @@
     <div class="row">
       <div class="col searchSpacing">
         <form class="form">
-          <input id="searchInput" type="text" class="searchBox" placeholder="Search for a city"/>
+          <input id="searchInput" type="text" class="searchBox" placeholder="Search for a city" />
           <button id="btnSearch" type="submit" class="searchBtn">
             <img src="./assets/Search.png">
           </button>
-          <img style="margin-left: 35%;" src="./assets/SearchFav.png" alt="">
+          <button style="background-color: transparent; border: none; margin-left: 35%;" id="searchFavBtn"><img
+              src="./assets/SearchFav.png" alt=""></button>
+          <p id="insertHere"></p>
         </form>
       </div>
     </div>
@@ -32,26 +34,30 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col ms-5 mt-4 colBorder">
-          <img id="currentWeatherIcon" class="sun" style="height: 155px; width: 155px;" src="../assets/SunnyBig.png" />
+          <img id="currentWeatherIcon" class="sun" style="height: 155px; width: 155px; z-index: 1;" src="../assets/SunnyBig.png" />
           <div class="currentBox pt-3 pb-4 me-5 ">
             <p class="text-center ctWText">Current Weather</p>
-            <p class="text-center locationText"> <span id="currentLocation" >San Diego, </span><span id="currentState">CA</span><img class="mb-2" src="./assets/NonFav.png"
-                  alt=""></span></p>
+            <p class="text-center locationText"> <span id="currentLocation">San Diego, </span><span
+                id="currentState">CA</span><button id="favoriteBtn"
+                style="background-color: transparent; border: none;"><img id="nonFavBtn" class="mb-2"
+                  src="./assets/NonFav.png" alt=""></button></span></p>
             <div class="text-center">
               <span class="tempText" id="currentTemp"> 62 </span>
-              <span class="btnFCText">°F</span>
+              <span><button class="btnFCText" id="turnToFeh"
+                  style="background-color: transparent; opacity: 100%; border: none;">°F</button></span>
               <span class="" style="font-size: 50px; color: white; ">|</span>
-              <span class="btnFCText" style="opacity: 55%;">°C</span>
-            </div>
+              <span><button class="btnFCText" style=" opacity: 55%; background-color: transparent; border: none;"
+                  id="turnToCelc">°C</button></span>
+            </div></button>
             <p class="text-center weatherCondText" id="weatherDescription">Clear Sky</p>
           </div>
 
-          
+
           <div class="makeItARow mt-5 mb-5 me-5 morePadding">
             <div class="col detailText text-center">
               <div class="text-end">
                 <p>Max <span><img src="./assets/Max.png" alt=""></span> &#160; | &#160;
-                  <span id="currentMax">65</span><span>°F</span>
+                  <span id="currentMax">65</span><span id="change1Unit">°F</span>
                 </p>
               </div>
               <div class="text-end">
@@ -62,137 +68,117 @@
             </div>
             <div class="col detailText text-start">
               <div class=" text-end">
-                <p>Min <span><img src="./assets/Min.png" alt=""></span> &#160; | &#160; <span id="currentMin">65</span><span>°F</span></p>
+                <p>Min <span><img src="./assets/Min.png" alt=""></span> &#160; | &#160; <span
+                    id="currentMin">65</span><span id="change2Unit">°F</span></p>
               </div>
               <div class="text-end">
-                <p>Humidity <span><img src="./assets/Humidity.png" alt=""></span> &#160; | &#160; <span id="currentHumid">15</span><span>%</span> 
+                <p>Humidity <span><img src="./assets/Humidity.png" alt=""></span> &#160; | &#160; <span
+                    id="currentHumid">15</span><span>%</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-      <div class="col-5 ms-5 mt-4 me-5">
+        <div class="col-5 ms-5 mt-4 me-5">
 
-        <div class="accordion accordion-flush forcastBgColor" id="accordionFlushExample">
+          <div class="accordion accordion-flush forcastBgColor" id="accordionFlushExample">
 
-          <div class="accordHeader">
-            <h2 class="accordion-header pt-3 ps-3">
-              <span class="forecastHeader"><img src="./assets/Calendar.png" alt="">
-                <div class="ps-5">5 Day Forecast</div>
-              </span>
-            </h2>
-            <hr>
-          </div>
-
-
-
-          <div class="accordion-item transBg">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed transBg" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                <span>
-                  <p class="weekText mon pt-3 dropMon" id="dropMon">Mon</p>
-                </span> <span><img src="./assets/SunnySmall.png" alt=""></span> <span class="hFont">H: <span id="day1High">65</span>°</span>
-                <span class="lFont">L: <span id="day1Low">45</span>°</span>
-              </button>
+            <div class="accordHeader">
+              <h2 class="accordion-header pt-3 ps-3">
+                <span class="forecastHeader"><img src="./assets/Calendar.png" alt="">
+                  <div class="ps-5">5 Day Forecast</div>
+                </span>
+              </h2>
               <hr>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-6">
-                    <div><span class="dropMon" id="dropMon2">Mon</span> <span><img src="./assets/SunnySmall.png" alt=""></span>
-                    </div>
-                    <div><span class="dropWeather" id="day1TempDrop"> 65 </span> <span class="dropF">°F </span><span
-                        style="font-size: 40px;"> | </span><span class="dropC"> °C</span></span></div>
-                    <div><span class="dropType" id="day1DescDrop" >Few Clouds</span></div>
-                  </div>
-
-
-                  <div class="col-6">
-                    <div class="mb-3 mt-3"><span><img src="./assets/Max.png" alt=""></span><span
-                        style="font-size: 20px;"> | </span><span class="dropFontType" id=day1MaxDrop> 62</span><span>°F</span></div>
-                    <div class="mb-3"><span><img src="./assets/Min.png" alt=""></span><span style="font-size: 20px;">
-                        | </span><span class="dropFontType" id="day1MinDrop"> 62</span><span>°F</span></div>
-                    <div class="mb-3"><span><img src="./assets/Wind.png" alt=""></span><span style="font-size: 20px;">
-                        | </span><span class="dropFontType" id="day1WindDrop"> 62</span><span>m/s</span></div>
-                    <div class="mb-3"><span><img src="./assets/Humidity.png" alt=""></span><span
-                        style="font-size: 20px;"> | </span><span class="dropFontType" id="day1HumidDrop"> 62</span><span>%</span></div>
-                  </div>
-                </div>
-
-              </div>
             </div>
+
+
+
             <div class="accordion-item transBg">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed transBg" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                   <span>
-                    <p class="weekText tue pt-3" id="dropTue">Tue</p>
-                  </span> <span><img src="./assets/SunCloud.png" alt=""></span> </span> <span class="hFont">H:
-                    65°</span> <span class="lFont">L: 45°</span>
+                    <p class="weekText mon pt-3 dropMon" id="dropMon">Mon</p>
+                  </span> <span><img id="day1WeatherIcon" src="./assets/SunnySmall.png" alt=""></span> <span
+                    class="hFont">H: <span id="day1High">65</span>°</span>
+                  <span class="lFont">L: <span id="day1Low">45</span>°</span>
                 </button>
                 <hr>
               </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <div class="row">
                     <div class="col-6">
-                      <div><span class="dropMon" id="dropTue2">Tue</span> <span><img src="./assets/SunCloud.png" alt=""></span>
+                      <div><span class="dropMon" id="dropMon2">Mon</span> <span><img id="day1WeatherIconDrop"
+                            src="./assets/SunnySmall.png" alt=""></span>
                       </div>
-                      <div><span class="dropWeather"> 65 </span> <span class="dropF">°F </span><span
-                          style="font-size: 40px;"> | </span><span class="dropC"> °C</span></span></div>
-                      <div><span class="dropType">Few Clouds</span></div>
+                      <div><span class="dropWeather" id="day1TempDrop"> 65 </span> <span class="dropF" id="changeF1">°F
+                        </span><span style="font-size: 40px;"> | </span><span class="dropC" id="changeC1">
+                          °C</span></span></div>
+                      <div><span class="dropType" id="day1DescDrop">Few Clouds</span></div>
                     </div>
 
 
                     <div class="col-6">
                       <div class="mb-3 mt-3"><span><img src="./assets/Max.png" alt=""></span><span
-                          style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                          style="font-size: 20px;"> | </span><span class="dropFontType" id=day1MaxDrop> 62</span><span
+                          id="change3Unit">°F</span></div>
                       <div class="mb-3"><span><img src="./assets/Min.png" alt=""></span><span style="font-size: 20px;">
-                          | </span><span class="dropFontType"> 62°F </span></div>
+                          | </span><span class="dropFontType" id="day1MinDrop"> 62</span><span
+                          id="change4Unit">°F</span></div>
                       <div class="mb-3"><span><img src="./assets/Wind.png" alt=""></span><span style="font-size: 20px;">
-                          | </span><span class="dropFontType"> 62°F </span></div>
+                          | </span><span class="dropFontType" id="day1WindDrop"> 62</span><span>m/s</span></div>
                       <div class="mb-3"><span><img src="./assets/Humidity.png" alt=""></span><span
-                          style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                          style="font-size: 20px;"> | </span><span class="dropFontType" id="day1HumidDrop">
+                          62</span><span>%</span></div>
                     </div>
                   </div>
+
                 </div>
               </div>
               <div class="accordion-item transBg">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed transBg" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseOne">
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                     <span>
-                      <p class="weekText wed pt-3" id="dropWed">Wed</p>
-                    </span> <span><img src="./assets/SunCloud.png" alt=""></span> </span> <span class="hFont">H:
-                      65°</span> <span class="lFont">L: 45°</span>
+                      <p class="weekText tue pt-3" id="dropTue">Tue</p>
+                    </span> <span><img id="day2WeatherIcon" src="./assets/SunCloud.png" alt=""></span> </span> <span
+                      class="hFont">H:
+                      <span id="day2High">65</span>°</span> <span class="lFont">L: <span id="day2Low">45</span>°</span>
                   </button>
                   <hr>
                 </h2>
-                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
                   data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <div class="row">
                       <div class="col-6">
-                        <div><span class="dropMon" id="dropWed2">Wed</span> <span><img src="./assets/SunCloud.png" alt=""></span>
+                        <div><span class="dropMon" id="dropTue2">Tue</span> <span><img id="day2WeatherIconDrop"
+                              src="./assets/SunCloud.png" alt=""></span>
                         </div>
-                        <div><span class="dropWeather"> 65 </span> <span class="dropF">°F </span><span
-                            style="font-size: 40px;"> | </span><span class="dropC"> °C</span></span></div>
-                        <div><span class="dropType">Few Clouds</span></div>
+                        <div><span class="dropWeather" id="day2TempDrop"> 65 </span> <span class="dropF"
+                            id="changeF2">°F </span><span style="font-size: 40px;"> | </span><span class="dropC"
+                            id="changeC2"> °C</span></span></div>
+                        <div><span class="dropType" id="day2DescDrop">Few Clouds</span></div>
                       </div>
 
 
                       <div class="col-6">
                         <div class="mb-3 mt-3"><span><img src="./assets/Max.png" alt=""></span><span
-                            style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                            style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                              id="day2MaxDrop">62</span><span id="change5Unit">°F</span> </span></div>
                         <div class="mb-3"><span><img src="./assets/Min.png" alt=""></span><span
-                            style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                            style="font-size: 20px;">
+                            | </span><span class="dropFontType"> <span id="day2MinDrop">62</span><span
+                              id="change6Unit">°F </span></span></div>
                         <div class="mb-3"><span><img src="./assets/Wind.png" alt=""></span><span
-                            style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                            style="font-size: 20px;">
+                            | </span><span class="dropFontType"> <span id="day2WindDrop">62</span>m/s </span></div>
                         <div class="mb-3"><span><img src="./assets/Humidity.png" alt=""></span><span
-                            style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                            style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                              id="day2HumidDrop">62</span>% </span></div>
                       </div>
                     </div>
                   </div>
@@ -200,36 +186,44 @@
                 <div class="accordion-item transBg">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed transBg" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseOne">
+                      data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseOne">
                       <span>
-                        <p class="weekText thu pt-3" id="dropThu">Thu</p>
-                      </span> <span><img src="./assets/Rainy.png" alt=""></span> </span> <span class="hFont">H:
-                        65°</span> <span class="lFont">L: 45°</span>
+                        <p class="weekText wed pt-3" id="dropWed">Wed</p>
+                      </span> <span><img id="day3WeatherIcon" src="./assets/SunCloud.png" alt=""></span> </span> <span
+                        class="hFont">H:
+                        <span id="day3High">65</span>°</span> <span class="lFont">L: <span
+                          id="day3Low">45</span>°</span>
                     </button>
                     <hr>
                   </h2>
-                  <div id="flush-collapseFive" class="accordion-collapse collapse"
+                  <div id="flush-collapseFour" class="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                       <div class="row">
                         <div class="col-6">
-                          <div><span class="dropMon" id="dropThu2">Thu</span> <span><img src="./assets/Rainy.png" alt=""></span>
+                          <div><span class="dropMon" id="dropWed2">Wed</span> <span><img id="day3WeatherIconDrop"
+                                src="./assets/SunCloud.png" alt=""></span>
                           </div>
-                          <div><span class="dropWeather"> 65 </span> <span class="dropF">°F </span><span
-                              style="font-size: 40px;"> | </span><span class="dropC"> °C</span></span></div>
-                          <div><span class="dropType">Few Clouds</span></div>
+                          <div><span class="dropWeather" id="day3TempDrop"> 65 </span> <span class="dropF"
+                              id="changeF3">°F </span><span style="font-size: 40px;"> | </span><span class="dropC"
+                              id="changeC3">°C</span></span></div>
+                          <div><span class="dropType" id="day3DescDrop">Few Clouds</span></div>
                         </div>
 
 
                         <div class="col-6">
                           <div class="mb-3 mt-3"><span><img src="./assets/Max.png" alt=""></span><span
-                              style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                              style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                id="day3MaxDrop">62</span><span id="change7Unit">°F</span> </span></div>
                           <div class="mb-3"><span><img src="./assets/Min.png" alt=""></span><span
-                              style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                              style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                id="day3MinDrop">62</span><span id="change8Unit">°F</span> </span></div>
                           <div class="mb-3"><span><img src="./assets/Wind.png" alt=""></span><span
-                              style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                              style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                id="day3WindDrop">62</span>m/s </span></div>
                           <div class="mb-3"><span><img src="./assets/Humidity.png" alt=""></span><span
-                              style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                              style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                id="day3HumidDrop">62</span>% </span></div>
                         </div>
                       </div>
                     </div>
@@ -237,35 +231,88 @@
                   <div class="accordion-item transBg">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed transBg" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseOne">
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseOne">
                         <span>
-                          <p class="weekText fri pt-3" id="dropFri">Fri</p>
-                        </span> <span><img src="./assets/SunnySmall.png" alt=""></span> </span> <span class="hFont">H:
-                          65°</span> <span class="lFont">L: 45°</span>
+                          <p class="weekText thu pt-3" id="dropThu">Thu</p>
+                        </span> <span><img id="day4WeatherIcon" src="./assets/Rainy.png" alt=""></span> </span> <span
+                          class="hFont">H:
+                          <span id="day4High">65</span>°</span> <span class="lFont">L: <span
+                            id="day4Low">45</span>°</span>
                       </button>
+                      <hr>
                     </h2>
-                    <div id="flush-collapseSix" class="accordion-collapse collapse"
+                    <div id="flush-collapseFive" class="accordion-collapse collapse"
                       data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                         <div class="row">
                           <div class="col-6">
-                            <div><span class="dropMon" id="dropFri2">Fri</span> <span><img src="./assets/SunnySmall.png"
-                                  alt=""></span></div>
-                            <div><span class="dropWeather"> 65 </span> <span class="dropF">°F </span><span
-                                style="font-size: 40px;"> | </span><span class="dropC"> °C</span></span></div>
-                            <div><span class="dropType">Few Clouds</span></div>
+                            <div><span class="dropMon" id="dropThu2">Thu</span> <span><img id="day4WeatherIconDrop"
+                                  src="./assets/Rainy.png" alt=""></span>
+                            </div>
+                            <div><span class="dropWeather" id="day4TempDrop"> 65 </span> <span class="dropF"
+                                id="changeF4">°F </span><span style="font-size: 40px;"> | </span><span class="dropC"
+                                id="changeC4"> °C</span></span></div>
+                            <div><span class="dropType" id="day4DescDrop">Few Clouds</span></div>
                           </div>
 
 
                           <div class="col-6">
                             <div class="mb-3 mt-3"><span><img src="./assets/Max.png" alt=""></span><span
-                                style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                                style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                  id="day4MaxDrop">62</span><span id="change9Unit">°F </span></span></div>
                             <div class="mb-3"><span><img src="./assets/Min.png" alt=""></span><span
-                                style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                                style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                  id="day4MinDrop">62</span><span id="change10Unit">°F</span> </span></div>
                             <div class="mb-3"><span><img src="./assets/Wind.png" alt=""></span><span
-                                style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                                style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                  id="day4WindDrop">62</span>m/s </span></div>
                             <div class="mb-3"><span><img src="./assets/Humidity.png" alt=""></span><span
-                                style="font-size: 20px;"> | </span><span class="dropFontType"> 62°F </span></div>
+                                style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                  id="day4HumidDrop">62</span>% </span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item transBg">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed transBg" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseOne">
+                          <span>
+                            <p class="weekText fri pt-3" id="dropFri">Fri</p>
+                          </span> <span><img id="day5WeatherIcon" src="./assets/SunnySmall.png" alt=""></span> </span>
+                          <span class="hFont">H:
+                            <span id="day5High">65</span>°</span> <span class="lFont">L: <span
+                              id="day5Low">45</span>°</span>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseSix" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          <div class="row">
+                            <div class="col-6">
+                              <div><span class="dropMon" id="dropFri2">Fri</span> <span><img id="day5WeatherIconDrop"
+                                    src="./assets/SunnySmall.png" alt=""></span></div>
+                              <div><span class="dropWeather" id="day5TempDrop"> 65 </span> <span class="dropF">°F
+                                </span><span style="font-size: 40px;"> | </span><span class="dropC"> °C</span></span>
+                              </div>
+                              <div><span class="dropType" id="day5DescDrop">Few Clouds</span></div>
+                            </div>
+
+
+                            <div class="col-6">
+                              <div class="mb-3 mt-3"><span><img src="./assets/Max.png" alt=""></span><span
+                                  style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                    id="day5MaxDrop">62</span><span id="change11Unit">°F</span> </span></div>
+                              <div class="mb-3"><span><img src="./assets/Min.png" alt=""></span><span
+                                  style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                    id="day5MinDrop">62</span><span id="change12Unit">°F</span> </span></div>
+                              <div class="mb-3"><span><img src="./assets/Wind.png" alt=""></span><span
+                                  style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                    id="day5WindDrop">62</span>m/s </span></div>
+                              <div class="mb-3"><span><img src="./assets/Humidity.png" alt=""></span><span
+                                  style="font-size: 20px;"> | </span><span class="dropFontType"> <span
+                                    id="day5HumidDrop">62</span>% </span></div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -273,19 +320,18 @@
                   </div>
                 </div>
               </div>
+
+
             </div>
-
-
           </div>
         </div>
       </div>
-    </div>
 
 
-    <script type="module" src="./scripts/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
+      <script type="module" src="./scripts/app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

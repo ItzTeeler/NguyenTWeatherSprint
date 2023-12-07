@@ -106,7 +106,9 @@ p{
 .btnBorder{
     border: none;
 }
- 
+.searchBox1{
+    width: 620px;
+}
 .searchBox {
     width: 620px;
     margin: 10px 10px 10px 10px;
@@ -232,7 +234,7 @@ p{
     font-family: JosefinSans-Regular;
     opacity: 55%;
     color: #FFFFFF;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .dropType{
