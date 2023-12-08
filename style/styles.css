@@ -121,7 +121,34 @@ p{
     padding-left: 60px;
     font-family: JosefinSans-Regular;
     font-size: 20px;
+    
   }
+
+  .searchBox:focus ~ .recentSearch {
+    display: block;
+}
+
+.recentSearch{
+    position: absolute;
+    height: 400px;
+    width: 565px;
+    top: 107.5px;
+    left: 98px;
+    background-color: #606971;
+    border-radius: 0px 0px 5px 5px;
+    z-index: 15;
+    opacity: 100%;
+    display: none;
+    border-top: 1px solid white;
+}
+.recentItem i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.recentItem{
+    display: flex;
+    align-items: flex-start;
+}
 
 ::placeholder{
     color: white;

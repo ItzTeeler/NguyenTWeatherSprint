@@ -151,7 +151,7 @@ async function FetchGeoLocation(searchInputs) {
     // currentStVar = data[0].state;
     // currentCountry = data[0].country;
     // cityName = data.name;
-    
+
     currentState.innerText = StateIntoAB(currentStVar);
     FetchLocalWeather(latitude, longitude);
     GetHighnLow(latitude, longitude);
@@ -196,7 +196,7 @@ async function FetchFiveDayWeather(lat, lon) {
     day1WindDrop.innerText = data.list[0].wind.speed;
     day1HumidDrop.innerText = data.list[0].main.humidity;
     WeatherIconForecast1(data.list[0].weather[0].description);
-    
+
 
     const word = data.list[0].weather[0].description;
     const capitalize = word.charAt(0).toUpperCase() + word.slice(1);
@@ -636,6 +636,144 @@ function WeatherIcon(weatherCondition) {
         case "light rain":
             currentWeatherIcon.src = "./assets/Rainy.png";
             break;
+        case "smoke":
+            currentWeatherIcon.src = "./assets/SunCloud.png";
+            break;
+        case "haze":
+            currentWeatherIcon.src = "./assets/SunCloud.png";
+            break;
+        case "sand/dusk whirls":
+            currentWeatherIcon.src = "./assets/SunCloud.png";
+            break;
+        case "fog":
+            currentWeatherIcon.src = "./assets/SunCloud.png";
+            break;
+        case "sand":
+            currentWeatherIcon.src = "./assets/SunCloud.png";
+            break;
+        case "volcanic ash":
+            currentWeatherIcon.src = "./assets/SunCloud.png";
+            break;
+        case "squalls":
+            currentWeatherIcon.src = "./assets/SunCloud.png";
+            break;
+        case "tornado":
+            currentWeatherIcon.src = "./assets/SunCloud.png";
+            break;
+        case "overcast clouds":
+            currentWeatherIcon.src = "./assets/SunCloud.png";
+            break;
+        case "light snow":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "heavy snow":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "sleet":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "light shower sleet":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "shower sleet":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "light rain and snow":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "rain and snow":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "light shower snow":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "shower snow":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower snow":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "moderate rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "very heavy rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "extreme rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "freezing rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "light intensity shower rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "shower rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity shower rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "ragged shower rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "dizzle":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "drizzle rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "shower rain and drizzle":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower rain and drizzle":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "shower drizzle":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy rain":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "light thunderstorm":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "heavy thunderstorm":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "ragged thunderstorm":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light drizzle":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with drizzle":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy drizzle":
+            currentWeatherIcon.src = "./assets/Rainy.png";
+            break;
         default: currentWeatherIcon.src = "./assets/SunnySmall.png";
     }
 }
@@ -681,9 +819,157 @@ function WeatherIconForecast1(weatherCondition) {
             day1WeatherIcon.src = "./assets/Rainy.png";
             day1WeatherIconDrop.src = "./assets/Rainy.png";
             break;
-        default: 
-        day1WeatherIcon.src = "./assets/SunnySmall.png";
-        day1WeatherIconDrop.src = "./assets/SunnySmall.png";
+        case "smoke":
+            day1WeatherIcon.src = "./assets/SunCloud.png";
+            day1WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "haze":
+            day1WeatherIcon.src = "./assets/SunCloud.png";
+            day1WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "sand/dusk whirls":
+            day1WeatherIcon.src = "./assets/SunCloud.png";
+            day1WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "fog":
+            day1WeatherIcon.src = "./assets/SunCloud.png";
+            day1WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "sand":
+            day1WeatherIcon.src = "./assets/SunCloud.png";
+            day1WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "volcanic ash":
+            day1WeatherIcon.src = "./assets/SunCloud.png";
+            day1WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "squalls":
+            day1WeatherIcon.src = "./assets/SunCloud.png";
+            day1WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "tornado":
+            day1WeatherIcon.src = "./assets/SunCloud.png";
+            day1WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "overcast clouds":
+            day1WeatherIcon.src = "./assets/SunCloud.png";
+            day1WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "light snow":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy snow":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "sleet":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light shower sleet":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower sleet":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light rain and snow":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "rain and snow":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light shower snow":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower snow":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower snow":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "dizzle":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle rain":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "drizzle rain":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle rain":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower rain and drizzle":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower rain and drizzle":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower drizzle":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light rain":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with rain":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy rain":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light thunderstorm":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy thunderstorm":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "ragged thunderstorm":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light drizzle":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with drizzle":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy drizzle":
+            day1WeatherIcon.src = "./assets/Rainy.png";
+            day1WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        default:
+            day1WeatherIcon.src = "./assets/SunnySmall.png";
+            day1WeatherIconDrop.src = "./assets/SunnySmall.png";
     }
 }
 
@@ -729,9 +1015,193 @@ function WeatherIconForecast2(weatherCondition) {
             day2WeatherIcon.src = "./assets/Rainy.png";
             day2WeatherIconDrop.src = "./assets/Rainy.png";
             break;
-        default: 
-        day2WeatherIcon.src = "./assets/SunnySmall.png";
-        day2WeatherIconDrop.src = "./assets/SunnySmall.png";
+        case "smoke":
+            day2WeatherIcon.src = "./assets/SunCloud.png";
+            day2WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "haze":
+            day2WeatherIcon.src = "./assets/SunCloud.png";
+            day2WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "sand/dusk whirls":
+            day2WeatherIcon.src = "./assets/SunCloud.png";
+            day2WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "fog":
+            day2WeatherIcon.src = "./assets/SunCloud.png";
+            day2WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "sand":
+            day2WeatherIcon.src = "./assets/SunCloud.png";
+            day2WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "volcanic ash":
+            day2WeatherIcon.src = "./assets/SunCloud.png";
+            day2WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "squalls":
+            day2WeatherIcon.src = "./assets/SunCloud.png";
+            day2WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "tornado":
+            day2WeatherIcon.src = "./assets/SunCloud.png";
+            day2WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "overcast clouds":
+            day2WeatherIcon.src = "./assets/SunCloud.png";
+            day2WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "light snow":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy snow":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "sleet":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light shower sleet":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower sleet":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light rain and snow":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "rain and snow":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light shower snow":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower snow":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower snow":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "moderate rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "very heavy rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "extreme rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "freezing rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity shower rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity shower rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "ragged shower rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "dizzle":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "drizzle rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower rain and drizzle":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower rain and drizzle":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower drizzle":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy rain":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light thunderstorm":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy thunderstorm":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "ragged thunderstorm":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light drizzle":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with drizzle":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy drizzle":
+            day2WeatherIcon.src = "./assets/Rainy.png";
+            day2WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        default:
+            day2WeatherIcon.src = "./assets/SunnySmall.png";
+            day2WeatherIconDrop.src = "./assets/SunnySmall.png";
     }
 }
 
@@ -777,9 +1247,193 @@ function WeatherIconForecast3(weatherCondition) {
             day3WeatherIcon.src = "./assets/Rainy.png";
             day3WeatherIconDrop.src = "./assets/Rainy.png";
             break;
-        default: 
-        day3WeatherIcon.src = "./assets/SunnySmall.png";
-        day3WeatherIconDrop.src = "./assets/SunnySmall.png";
+        case "smoke":
+            day3WeatherIcon.src = "./assets/SunCloud.png";
+            day3WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "haze":
+            day3WeatherIcon.src = "./assets/SunCloud.png";
+            day3WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "sand/dusk whirls":
+            day3WeatherIcon.src = "./assets/SunCloud.png";
+            day3WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "fog":
+            day3WeatherIcon.src = "./assets/SunCloud.png";
+            day3WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "sand":
+            day3WeatherIcon.src = "./assets/SunCloud.png";
+            day3WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "volcanic ash":
+            day3WeatherIcon.src = "./assets/SunCloud.png";
+            day3WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "squalls":
+            day3WeatherIcon.src = "./assets/SunCloud.png";
+            day3WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "tornado":
+            day3WeatherIcon.src = "./assets/SunCloud.png";
+            day3WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "overcast clouds":
+            day3WeatherIcon.src = "./assets/SunCloud.png";
+            day3WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "light snow":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy snow":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "sleet":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light shower sleet":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower sleet":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light rain and snow":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "rain and snow":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light shower snow":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower snow":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower snow":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "moderate rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "very heavy rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "extreme rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "freezing rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity shower rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity shower rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "ragged shower rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "dizzle":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "drizzle rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower rain and drizzle":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower rain and drizzle":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower drizzle":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy rain":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light thunderstorm":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy thunderstorm":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "ragged thunderstorm":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light drizzle":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with drizzle":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy drizzle":
+            day3WeatherIcon.src = "./assets/Rainy.png";
+            day3WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        default:
+            day3WeatherIcon.src = "./assets/SunnySmall.png";
+            day3WeatherIconDrop.src = "./assets/SunnySmall.png";
     }
 }
 
@@ -825,9 +1479,193 @@ function WeatherIconForecast4(weatherCondition) {
             day4WeatherIcon.src = "./assets/Rainy.png";
             day4WeatherIconDrop.src = "./assets/Rainy.png";
             break;
-        default: 
-        day4WeatherIcon.src = "./assets/SunnySmall.png";
-        day4WeatherIconDrop.src = "./assets/SunnySmall.png";
+        case "smoke":
+            day4WeatherIcon.src = "./assets/SunCloud.png";
+            day4WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "haze":
+            day4WeatherIcon.src = "./assets/SunCloud.png";
+            day4WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "sand/dusk whirls":
+            day4WeatherIcon.src = "./assets/SunCloud.png";
+            day4WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "fog":
+            day4WeatherIcon.src = "./assets/SunCloud.png";
+            day4WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "sand":
+            day4WeatherIcon.src = "./assets/SunCloud.png";
+            day4WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "volcanic ash":
+            day4WeatherIcon.src = "./assets/SunCloud.png";
+            day4WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "squalls":
+            day4WeatherIcon.src = "./assets/SunCloud.png";
+            day4WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "tornado":
+            day4WeatherIcon.src = "./assets/SunCloud.png";
+            day4WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "overcast clouds":
+            day4WeatherIcon.src = "./assets/SunCloud.png";
+            day4WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "light snow":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy snow":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "sleet":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light shower sleet":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower sleet":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light rain and snow":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "rain and snow":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light shower snow":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower snow":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower snow":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "moderate rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "very heavy rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "extreme rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "freezing rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity shower rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity shower rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "ragged shower rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "dizzle":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "drizzle rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower rain and drizzle":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower rain and drizzle":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower drizzle":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy rain":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light thunderstorm":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy thunderstorm":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "ragged thunderstorm":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light drizzle":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with drizzle":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy drizzle":
+            day4WeatherIcon.src = "./assets/Rainy.png";
+            day4WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        default:
+            day4WeatherIcon.src = "./assets/SunnySmall.png";
+            day4WeatherIconDrop.src = "./assets/SunnySmall.png";
     }
 }
 
@@ -873,9 +1711,193 @@ function WeatherIconForecast5(weatherCondition) {
             day5WeatherIcon.src = "./assets/Rainy.png";
             day5WeatherIconDrop.src = "./assets/Rainy.png";
             break;
-        default: 
-        day5WeatherIcon.src = "./assets/SunnySmall.png";
-        day5WeatherIconDrop.src = "./assets/SunnySmall.png";
+        case "smoke":
+            day5WeatherIcon.src = "./assets/SunCloud.png";
+            day5WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "haze":
+            day5WeatherIcon.src = "./assets/SunCloud.png";
+            day5WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "sand/dusk whirls":
+            day5WeatherIcon.src = "./assets/SunCloud.png";
+            day5WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "fog":
+            day5WeatherIcon.src = "./assets/SunCloud.png";
+            day5WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "sand":
+            day5WeatherIcon.src = "./assets/SunCloud.png";
+            day5WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "volcanic ash":
+            day5WeatherIcon.src = "./assets/SunCloud.png";
+            day5WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "squalls":
+            day5WeatherIcon.src = "./assets/SunCloud.png";
+            day5WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "tornado":
+            day5WeatherIcon.src = "./assets/SunCloud.png";
+            day5WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "overcast clouds":
+            day5WeatherIcon.src = "./assets/SunCloud.png";
+            day5WeatherIconDrop.src = "./assets/SunCloud.png";
+            break;
+        case "light snow":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy snow":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "sleet":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light shower sleet":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower sleet":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light rain and snow":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "rain and snow":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light shower snow":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower snow":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower snow":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "moderate rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "very heavy rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "extreme rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "freezing rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity shower rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity shower rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "ragged shower rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "dizzle":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light intensity drizzle rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "drizzle rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy intensity drizzle rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower rain and drizzle":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy shower rain and drizzle":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "shower drizzle":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy rain":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "light thunderstorm":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "heavy thunderstorm":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "ragged thunderstorm":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with light drizzle":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with drizzle":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        case "thunderstorm with heavy drizzle":
+            day5WeatherIcon.src = "./assets/Rainy.png";
+            day5WeatherIconDrop.src = "./assets/Rainy.png";
+            break;
+        default:
+            day5WeatherIcon.src = "./assets/SunnySmall.png";
+            day5WeatherIconDrop.src = "./assets/SunnySmall.png";
     }
 }
 GetDay();
@@ -892,10 +1914,10 @@ favoriteBtn.addEventListener("click", function () {
 
     let favArray = JSON.parse(localStorage.getItem("favWeather")) || [];
 
-    let locationIndex = favArray.findIndex(function(loc) {
+    let locationIndex = favArray.findIndex(function (loc) {
         return loc.city === favoriteLocation.city && loc.state === favoriteLocation.state;
     });
-
+    console.log(locationIndex)
     if (locationIndex !== -1) {
         favArray.splice(locationIndex, 1);
         nonFavBtn.src = "./assets/NonFav.png"
@@ -915,24 +1937,39 @@ function MakeDropDown() {
     let favArray = JSON.parse(localStorage.getItem("favWeather")) || [];
 
     let ul = document.createElement("ul");
-    ul.className = "list-group";
+    ul.className = "list-group ms-4";
 
-    favArray.forEach(function(location) {
+    let li = document.createElement("li");
+    li.className = "list-group-item";
+    li.innerText = "Favorite Locations"
+    li.style.color = "yellow";
+    li.style.backgroundColor = "#606971";
+    li.style.fontFamily = "JosefinSans-Bold";
+    li.style.fontSize = "20px";
+
+
+    ul.appendChild(li);
+    favArray.forEach(function (location) {
         let li = document.createElement("li");
         li.className = "list-group-item";
-        li.innerText = `${location.city}, ${location.state}, ${location.country}`;
+        li.innerText = `${location.city}, ${StateIntoAB(location.state)}, ${location.country}`;
+        li.style.backgroundColor = "#606971";
+        li.style.color = "white";
+        li.style.fontFamily = "JosefinSans-Regular";
+        li.style.fontSize = "20px";
 
         // Add a click event listener to each li
-        li.addEventListener("click", function() {
+        li.addEventListener("click", function () {
             FavInput(location.city, location.state);
         });
-        
+
         ul.appendChild(li);
     });
 
     ul.style.zIndex = "10";
     ul.style.position = "absolute";
-    ul.style.width = "620px";
+    ul.style.width = "590px";
+    ul.style.top = "65px";
 
     insertHere.innerHTML = "";
     insertHere.appendChild(ul);
@@ -946,10 +1983,43 @@ function MakeDropDown() {
     isDropdownVisible = !isDropdownVisible;
 }
 
-searchFavBtn.addEventListener("click", function(e){
+searchFavBtn.addEventListener("click", function (e) {
     e.preventDefault();
     MakeDropDown();
     updateWeatherUnits();
+});
+
+document.getElementById("searchInput").addEventListener("focus", function () {
+    document.querySelector(".recentSearch").style.display = "block";
+});
+
+document.getElementById("searchInput").addEventListener("blur", function () {
+    document.querySelector(".recentSearch").style.display = "none";
+});
+
+let recentList = document.querySelector(".recentList");
+let searchBox = document.querySelector(".searchBox");
+
+let submitForm = document.getElementById("submitForm");
+let recentSearch = [];
+
+submitForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    recentSearch.unshift(searchBox.value);
+    console.log(recentSearch);
+
+    let recentHTMLList = "";
+
+    for (let i = 0; i < recentSearch.length; i++) {
+        recentHTMLList += `
+        <div class="recentItem mt-3">
+            <i><img src="./assets/Recent.png" alt=""></i>
+            <p style="font-size: 20px;">${recentSearch[i]}</p>
+        </div>`;
+    }
+
+    recentList.innerHTML = recentHTMLList;
 });
 
 async function FavInput(favInputs) {
@@ -961,7 +2031,7 @@ async function FavInput(favInputs) {
     // currentStVar = data[0].state;
     // currentCountry = data[0].country;
     // cityName = data.name;
-    
+
     currentState.innerText = StateIntoAB(currentStVar);
     FetchLocalWeather(latitude, longitude);
     GetHighnLow(latitude, longitude);
@@ -969,7 +2039,7 @@ async function FavInput(favInputs) {
 
 }
 
-turnToCelc.addEventListener("click", function(){
+turnToCelc.addEventListener("click", function () {
     turnToFeh.style.opacity = ".55"
     turnToCelc.style.opacity = "1"
     changeF1.style.opacity = ".55"
@@ -998,7 +2068,7 @@ turnToCelc.addEventListener("click", function(){
     updateWeatherUnits();
 });
 
-turnToFeh.addEventListener("click", function(){
+turnToFeh.addEventListener("click", function () {
     turnToFeh.style.opacity = "1";
     turnToCelc.style.opacity = ".55";
 
@@ -1027,7 +2097,7 @@ turnToFeh.addEventListener("click", function(){
     updateWeatherUnits();
 });
 
-function updateWeatherUnits(){
+function updateWeatherUnits() {
     FetchLocalWeather(latitude, longitude);
     FetchFiveDayWeather(latitude, longitude);
     ReverseGeoLocation(latitude, longitude);

@@ -16,7 +16,7 @@
     <!-- Search Bar -->
     <div class="row">
       <div class="col searchSpacing">
-        <form class="form">
+        <form class="" id="submitForm" style="z-index: 20; position:relative">
           <input id="searchInput" type="text" class="searchBox" placeholder="Search for a city" />
           <button id="btnSearch" type="submit" class="searchBtn">
             <img src="./assets/Search.png">
@@ -25,6 +25,23 @@
               src="./assets/SearchFav.png" alt=""></button>
           <p id="insertHere"></p>
         </form>
+      </div>
+
+      <div class="recentSearch">
+          <div class="recentList mt-3" style="color: white; font-size: 20px; font-family: JosefinSans-Regular;">
+            Recent List
+            <div class="recentItem mt-3">
+              <i><img src="./assets/Recent.png" alt=""></i>
+              <p style="font-size: 20px;">Stockton</p>
+          </div>
+          <div class="recentItem mt-3">
+            <i><img src="./assets/Recent.png" alt=""></i>
+            <p style="font-size: 20px;">Sacramento</p>
+        </div>
+        <div class="recentItem mt-3">
+          <i><img src="./assets/Recent.png" alt=""></i>
+          <p style="font-size: 20px;">Yosemite</p>
+      </div>
       </div>
     </div>
     <!-- End of Search Bar -->
