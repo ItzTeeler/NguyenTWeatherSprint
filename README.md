@@ -10,6 +10,7 @@ Current Weather Data = ("https://openweathermap.org/current")
 Geocoding API = ("https://openweathermap.org/api/geocoding-api)
 
 // (Peer Review)
+Name: Brandon Nguyen 12/8 @ 2:12PM
 
 layout - the gif works perfectly, and the layout looks pretty similar to the figma.
 
