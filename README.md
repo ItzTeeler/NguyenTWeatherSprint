@@ -10,3 +10,15 @@ Current Weather Data = ("https://openweathermap.org/current")
 Geocoding API = ("https://openweathermap.org/api/geocoding-api)
 
 // (Peer Review)
+
+layout - the gif works perfectly, and the layout looks pretty similar to the figma.
+
+Current forecast - the fahrenheit and celcius should be moved up a little
+
+5 day forecatst - when you click the drop down, the current weather icon shifts a little.
+also when you click the drop down, the header for the 5 day forecast doesn't disappear
+The hr's under each drop down should have some margin lefts and right
+the 5 day forecast icons should also be lined up with each other
+
+search bar- when you type in a city, it doesn't add it into the recents list
+favorites drop doesn't blend into the search bar
