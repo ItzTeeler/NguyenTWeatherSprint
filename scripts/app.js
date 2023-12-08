@@ -10,8 +10,6 @@ let searchInput = document.getElementById("searchInput");
 // Favorite
 let favoriteBtn = document.getElementById("favoriteBtn");
 
-let favArray = [];
-
 let nonFavBtn = document.getElementById("nonFavBtn");
 
 let searchFavBtn = document.getElementById("searchFavBtn");
@@ -1997,30 +1995,30 @@ document.getElementById("searchInput").addEventListener("blur", function () {
     document.querySelector(".recentSearch").style.display = "none";
 });
 
-let recentList = document.querySelector(".recentList");
-let searchBox = document.querySelector(".searchBox");
+// let recentList = document.querySelector(".recentList");
+// let searchBox = document.querySelector(".searchBox");
 
-let submitForm = document.getElementById("submitForm");
-let recentSearch = [];
+// let submitForm = document.getElementById("submitForm");
+// let recentSearch = [];
 
-submitForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+// submitForm.addEventListener("submit", function (e) {
+//     e.preventDefault();
 
-    recentSearch.unshift(searchBox.value);
-    console.log(recentSearch);
+//     recentSearch.unshift(searchBox.value);
+//     console.log(recentSearch);
 
-    let recentHTMLList = "";
+//     let recentHTMLList = "";
 
-    for (let i = 0; i < recentSearch.length; i++) {
-        recentHTMLList += `
-        <div class="recentItem mt-3">
-            <i><img src="./assets/Recent.png" alt=""></i>
-            <p style="font-size: 20px;">${recentSearch[i]}</p>
-        </div>`;
-    }
+//     for (let i = 0; i < recentSearch.length; i++) {
+//         recentHTMLList += `
+//         <div class="recentItem mt-3">
+//             <i><img src="./assets/Recent.png" alt=""></i>
+//             <p style="font-size: 20px;">${recentSearch[i]}</p>
+//         </div>`;
+//     }
 
-    recentList.innerHTML = recentHTMLList;
-});
+//     recentList.innerHTML = recentHTMLList;
+// });
 
 async function FavInput(favInputs) {
     const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${favInputs}&appid=${apiKey}`);
